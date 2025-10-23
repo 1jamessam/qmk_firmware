@@ -33,11 +33,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* SYMBOL
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * |      |      |      |   @  |   &  |   |  |                    |      |      |      |      |      |      |
+ * |      |      |   #  |   @  |   &  |   |  |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |      |   !  |   [  |   ]  |   =  |   `  |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |   #  |   ^  |   (  |   )  |   $  |   *  |-------.    ,-------|      |      |      |      |      |      |
+ * |      |   ^  |   (  |   )  |   $  |   *  |-------.    ,-------|      |      |      |      |      |      |
  * |------+------+------+------+------+------|   :   |    |       |------+------+------+------+------|------|
  * |      |      |   {  |   }  |   ~  |   %  |-------|    |-------|      |      |      |      |      |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
@@ -46,10 +46,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                   `----------------------------'           '------''--------------------'
  */
  [_SYMB] = LAYOUT(
-  XXXXXXX, XXXXXXX, XXXXXXX,   KC_AT, KC_AMPR, KC_PIPE,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+  XXXXXXX, XXXXXXX, KC_HASH,   KC_AT, KC_AMPR, KC_PIPE,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   XXXXXXX, KC_EXLM, KC_LBRC, KC_RBRC, KC_PEQL,  KC_GRV,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  KC_HASH, KC_CIRC, KC_LPRN, KC_RPRN,  KC_DLR, KC_ASTR,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  XXXXXXX, XXXXXXX, KC_LCBR, KC_RCBR, KC_TILD, KC_PERC, KC_COLN, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+  XXXXXXX, KC_CIRC, KC_LPRN, KC_RPRN,  KC_DLR, KC_ASTR,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+  XXXXXXX, XXXXXXX, KC_LCBR, KC_RCBR, KC_COLN, KC_PERC, KC_COLN, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                              _______, _______, _______, _______, _______,  _______, _______, _______
  ),
 
