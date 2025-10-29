@@ -11,12 +11,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* COLEMAK
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * | ESC  | SG<- | SG-> | SG+4 |  C<- |  C-> |                    | MPRV | MPLY | MFFD | MUTE | VOLD | VOLU |
+ * | ESC  | SG<- | SG-> |  C-^ |  C<- |  C-> |                    | MPRV | MPLY | MFFD | MUTE | VOLD | VOLU |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * | Tab  |   Q  |   W  |   F  |   P  |   B  |                    |   J  |   L  |   U  |   Y  |   ;  | PGUP |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | BSPC |   A  |   R  |   S  |   T  |   G  |-------.    ,-------|   M  |N/SYMB| E/NUM|   I  |   O  |  DEL |
- * |------+------+------+------+------+------|  - _  |    |  ' "  |------+------+------+------+------+------|
+ * | BSPC |   A  |   R  |   S  |   T  |   G  |-------.    ,-------|   M  |N/SYMB| E/NUM|   I  |   O  |  ' " |
+ * |------+------+------+------+------+------|  - _  |    |  DEL  |------+------+------+------+------+------|
  * | CAPS |   Z  |   X  |   C  |   D  |   V  |-------|    |-------|   K  |   H  |  , < |  . > |  / ? | PGDN |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | LAlt | LGUI | LCTL | /SFT/SPC/       \ENT/NAV\ | GU-SH| GU-CT| RALT |
@@ -24,11 +24,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                   `----------------------------'           '------''--------------------'
  */
  [_COLEMAK] = LAYOUT(
-  KC_ESC, LSG_T(KC_LBRC), LSG_T(KC_RBRC), LSG_T(KC_4), LCTL(KC_LEFT),  LCTL(KC_RGHT),                                  KC_MPRV,       KC_MPLY,        KC_MFFD,       KC_MUTE, KC_VOLD, KC_VOLU,
-  KC_TAB,           KC_Q,           KC_W,        KC_F,          KC_P,           KC_B,                                  KC_J,          KC_L,           KC_U,          KC_Y,    KC_SCLN, KC_PGUP,
-  KC_BSPC,          KC_A,           KC_R,        KC_S,          KC_T,           KC_G,                                  KC_M,          LT(_SYMB,KC_N), LT(_NUM,KC_E), KC_I,    KC_O,    KC_DEL,
-  KC_CAPS,          KC_Z,           KC_X,        KC_C,          KC_D,           KC_V,          KC_MINS, KC_QUOT,       KC_K,          KC_H,           KC_COMM,       KC_DOT,  KC_SLSH, KC_PGDN,
-                                 KC_LALT,     KC_LGUI,       KC_LCTL, LSFT_T(KC_SPC), LT(_NAVI,KC_ENT), LGUI(KC_LSFT), LGUI(KC_LCTL), KC_RALT
+  KC_ESC, LSG(KC_LBRC), LSG(KC_RBRC), LCTL(KC_UP), LCTL(KC_LEFT),  LCTL(KC_RGHT),                                   KC_MPRV,       KC_MPLY,        KC_MFFD,       KC_MUTE, KC_VOLD, KC_VOLU,
+  KC_TAB,         KC_Q,         KC_W,        KC_F,          KC_P,           KC_B,                                   KC_J,          KC_L,           KC_U,          KC_Y,    KC_SCLN, KC_PGUP,
+  KC_BSPC,        KC_A,         KC_R,        KC_S,          KC_T,           KC_G,                                   KC_M,          LT(_SYMB,KC_N), LT(_NUM,KC_E), KC_I,    KC_O,    KC_QUOT,
+  KC_CAPS,        KC_Z,         KC_X,        KC_C,          KC_D,           KC_V,        KC_MINS, KC_DEL,           KC_K,          KC_H,           KC_COMM,       KC_DOT,  KC_SLSH, KC_PGDN,
+                                          KC_LALT,       KC_LCTL,        KC_LGUI, LSFT_T(KC_SPC), LT(_NAVI,KC_ENT), LGUI(KC_LSFT), LGUI(KC_LCTL),  KC_RALT
  ),
 
 /* SYMBOL
@@ -70,37 +70,37 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  [_NUM] = LAYOUT(
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   XXXXXXX, KC_PSLS,    KC_9,    KC_8,    KC_7, KC_ASTR,                XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  XXXXXXX, KC_MINS,    KC_3,    KC_2,    KC_1, KC_PLUS,                XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+  XXXXXXX, KC_MINS,    KC_3,    KC_2,    KC_1, KC_PLUS,                XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   XXXXXXX, KC_PEQL,    KC_6,    KC_5,    KC_4,  KC_DOT, KC_0, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                              _______, _______, _______, _______, _______,  _______, _______, _______
  ),
 
 /* NAVI
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * |      |      |      |      |      |      |                    |      | C-<- | C-^  | C->  |      |      |
+ * |      |      |      |      |      |      |                    |      |      | C-^  |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |      |      |      |      |      |      |                    | PGUP | HOME |  UP  | END  |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |      |      |      |      |      |      |-------.    ,-------| PGDN | LEFT | DOWN | RGHT |      |      |
+ * |      |      |      |      |      |      |-------.    ,-------|  C<- | LEFT | DOWN | RGHT |  C-> |      |
  * |------+------+------+------+------+------|       |    |       |------+------+------+------+------|------|
- * |      |      |      |      |      |      |-------|    |-------|      | SG-[ |      | SG-] |      |      |
+ * |      |      |      |      |      |      |-------|    |-------| PGDN | SG-[ |      | SG-] |      |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | LAlt | LGUI | LCTL | /SFT/SPC/       \ENT/NAV\ | RCTL | RGUI | RALT |
  *                   |      |      |      |/       /         \      \ |      |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
  [_NAVI] = LAYOUT(
-  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, LCTL(KC_LEFT),  LCTL(KC_UP), LCTL(KC_RGHT),  XXXXXXX, XXXXXXX,
-  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   KC_PGUP, KC_HOME,        KC_UP,       KC_END,         XXXXXXX, XXXXXXX,
-  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   KC_PGDN, KC_LEFT,        KC_DOWN,     KC_RGHT,        XXXXXXX, XXXXXXX,
-  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, LSG_T(KC_LBRC), XXXXXXX,     LSG_T(KC_LBRC), XXXXXXX, XXXXXXX,
+  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX,       XXXXXXX,      LCTL(KC_UP), XXXXXXX,      XXXXXXX,       XXXXXXX,
+  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   KC_PGUP,       KC_HOME,      KC_UP,       KC_END,       XXXXXXX,       XXXXXXX,
+  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   LCTL(KC_LEFT), KC_LEFT,      KC_DOWN,     KC_RGHT,      LCTL(KC_RGHT), XXXXXXX,
+  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_PGDN,       LSG(KC_LBRC), XXXXXXX,     LSG(KC_RBRC), XXXXXXX,       XXXXXXX,
                              _______, _______, _______, _______, _______,  _______, _______, _______
  )
 
 /* THAI
  * ,-----------------------------------------.                    ,-----------------------------------------.
  * | ESC  |   1  |   2  |   3  |   4  |   5  |                    |   6  |   7  |   8  |   9  |   0  |  `   |
- * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
+#* |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * | Tab  |   Q  |   W  |   E  |   R  |   T  |                    |   Y  |   U  |   I  |   O  |   P  |  -   |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |LCTRL |   A  |   S  |   D  |   F  |   G  |-------.    ,-------|   H  |   J  |   K  |   L  |   ;  |  '   |
@@ -120,10 +120,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //                                  _______, _______, _______, _______, _______,  _______, _______, _______
 // ),
 };
-
-layer_state_t layer_state_set_user(layer_state_t state) {
-  return update_tri_layer_state(state, _SYMB, _NUM, _NAVI);
-}
 
 //SSD1306 OLED update loop, make sure to enable OLED_ENABLE=yes in rules.mk
 #ifdef OLED_ENABLE
