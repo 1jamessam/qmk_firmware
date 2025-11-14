@@ -13,7 +13,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------.                    ,-----------------------------------------.
  * | ESC  | SG<- | SG-> |  C-^ |  C<- |  C-> |                    | MPRV | MPLY | MFFD | MUTE | VOLD | VOLU |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | Tab  |   Q  |   W  |   F  |   P  |   B  |                    |   J  |   L  |   U  |   Y  |   ;  | PGUP |
+ * | Tab  |   Q  |   W  |   F  |   P  |   B  |                    |   J  |   L  |   U  |   Y  |   ;  |   \  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * | BSPC |   A  |   R  |   S  |   T  |   G  |-------.    ,-------|   M  |N/SYMB| E/NUM|   I  |   O  |  ' " |
  * |------+------+------+------+------+------|  - _  |    |  DEL  |------+------+------+------+------+------|
@@ -25,7 +25,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
  [_COLEMAK] = LAYOUT(
   KC_ESC, LSG(KC_LBRC), LSG(KC_RBRC), C(KC_UP), C(KC_LEFT),  C(KC_RGHT),                                   KC_MPRV,       KC_MPLY,        KC_MFFD,       KC_MUTE, KC_VOLD, KC_VOLU,
-  KC_TAB,         KC_Q,         KC_W,     KC_F,       KC_P,        KC_B,                                   KC_J,          KC_L,           KC_U,          KC_Y,    KC_SCLN, KC_PGUP,
+  KC_TAB,         KC_Q,         KC_W,     KC_F,       KC_P,        KC_B,                                   KC_J,          KC_L,           KC_U,          KC_Y,    KC_SCLN, KC_BSLS,
   KC_BSPC,        KC_A,         KC_R,     KC_S,       KC_T,        KC_G,                                   KC_M,          LT(_SYMB,KC_N), LT(_NUM,KC_E), KC_I,    KC_O,    KC_QUOT,
   KC_CAPS,        KC_Z,         KC_X,     KC_C,       KC_D,        KC_V,        KC_MINS, KC_DEL,           KC_K,          KC_H,           KC_COMM,       KC_DOT,  KC_SLSH, KC_PGDN,
                                           KC_LALT, KC_LGUI,     KC_LCTL, LSFT_T(KC_SPC), LT(_NAVI,KC_ENT), LGUI(KC_LSFT), LGUI(KC_LCTL),  KC_RALT
