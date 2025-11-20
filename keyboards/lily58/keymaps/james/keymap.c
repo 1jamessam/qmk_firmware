@@ -20,15 +20,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * | CAPS |   Z  |   X  |   C  |   D  |   V  |-------|    |-------|   K  |   H  |  , < |  . > |  / ? | PGDN |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | LAlt | LGUI | LCTL | /SFT/SPC/       \ENT/NAV\ | GU-SH| GU-CT| RALT |
- *                   |      |      |      |/       /         \      \ |      |      |      |
+ *                   |      |      |  ESC |/       /         \      \ |      |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
  [_COLEMAK] = LAYOUT(
-  KC_ESC,  KC_BRID, KC_BRIU, C(KC_UP),    C(KC_LEFT), C(KC_RGHT),                                   KC_MPRV,       KC_MPLY,        KC_MFFD, KC_MUTE, KC_VOLD, KC_VOLU,
-  KC_TAB,  KC_Q,       KC_W,     KC_F,          KC_P,       KC_B,                                   KC_J,          KC_L,           KC_U,    KC_Y,    KC_SCLN, KC_BSLS,
-  KC_BSPC, KC_A,       KC_R,     KC_S, LT(_NUM,KC_T),       KC_G,                                   KC_M,          LT(_SYMB,KC_N), KC_E,    KC_I,    KC_O,    KC_QUOT,
-  KC_CAPS, KC_Z,       KC_X,     KC_C,          KC_D,       KC_V,        KC_MINS, KC_DEL,           KC_K,          KC_H,           KC_COMM, KC_DOT,  KC_SLSH, KC_PGDN,
-                              KC_LALT,       KC_LGUI,    KC_LCTL, LSFT_T(KC_SPC), LT(_NAVI,KC_ENT), LGUI(KC_LSFT), LGUI(KC_LCTL),  KC_RALT
+  KC_ESC,  KC_BRID, KC_BRIU, C(KC_UP),    C(KC_LEFT),    C(KC_RGHT),                                  KC_MPRV,    KC_MPLY,        KC_MFFD, KC_MUTE, KC_VOLD, KC_VOLU,
+  KC_TAB,  KC_Q,       KC_W,     KC_F,          KC_P,          KC_B,                                  KC_J,       KC_L,           KC_U,    KC_Y,    KC_SCLN, KC_BSLS,
+  KC_BSPC, KC_A,       KC_R,     KC_S, LT(_NUM,KC_T),          KC_G,                                  KC_M,       LT(_SYMB,KC_N), KC_E,    KC_I,    KC_O,    KC_QUOT,
+  KC_CAPS, KC_Z,       KC_X,     KC_C,          KC_D,          KC_V,       KC_MINS, KC_DEL,           KC_K,       KC_H,           KC_COMM, KC_DOT,  KC_SLSH, KC_PGDN,
+                              KC_LALT,       KC_LGUI, CTL_T(KC_ESC), SFT_T(KC_SPC), LT(_NAVI,KC_ENT), G(KC_LSFT), G(KC_LCTL),  KC_RALT
  ),
 
 /* SYMBOL
