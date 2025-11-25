@@ -16,7 +16,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * | Tab  |   Q  |   W  |   F  |   P  |   B  |                    |   J  |   L  |   U  |   Y  |   ;  |   \  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * | BSPC |   A  |   R  |   S  | T/NUM|   G  |-------.    ,-------|   M  |N/SYMB|   E  |   I  |   O  |  ' " |
- * |------+------+------+------+------+------|  - _  |    |  DEL  |------+------+------+------+------+------|
+ * |------+------+------+------+------+------|  - _  |    |  SPOT |------+------+------+------+------+------|
  * | CAPS |   Z  |   X  |   C  |   D  |   V  |-------|    |-------|   K  |   H  |  , < |  . > |  / ? | PGDN |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | LAlt | LGUI | LCTL | /SFT/SPC/       \ENT/NAV\ | GU-SH| GU-CT| RALT |
@@ -27,7 +27,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_ESC,  KC_BRID, KC_BRIU, C(KC_UP),    C(KC_LEFT),    C(KC_RGHT),                                  KC_MPRV,    KC_MPLY,        KC_MFFD, KC_MUTE, KC_VOLD, KC_VOLU,
   KC_TAB,  KC_Q,       KC_W,     KC_F,          KC_P,          KC_B,                                  KC_J,       KC_L,           KC_U,    KC_Y,    KC_SCLN, KC_BSLS,
   KC_BSPC, KC_A,       KC_R,     KC_S, LT(_NUM,KC_T),          KC_G,                                  KC_M,       LT(_SYMB,KC_N), KC_E,    KC_I,    KC_O,    KC_QUOT,
-  KC_CAPS, KC_Z,       KC_X,     KC_C,          KC_D,          KC_V,       KC_MINS, KC_DEL,           KC_K,       KC_H,           KC_COMM, KC_DOT,  KC_SLSH, KC_PGDN,
+  KC_CAPS, KC_Z,       KC_X,     KC_C,          KC_D,          KC_V,       KC_MINS, G(KC_SPC),        KC_K,       KC_H,           KC_COMM, KC_DOT,  KC_SLSH, KC_PGDN,
                               KC_LALT,       KC_LGUI, CTL_T(KC_ESC), SFT_T(KC_SPC), LT(_NAVI,KC_ENT), G(KC_LSFT), G(KC_LCTL),  KC_RALT
  ),
 
@@ -49,7 +49,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   XXXXXXX, XXXXXXX, KC_HASH,   KC_AT, KC_AMPR, KC_PIPE,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   XXXXXXX, KC_EXLM, KC_LBRC, KC_RBRC, KC_PEQL,  KC_GRV,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   XXXXXXX, KC_CIRC, KC_LPRN, KC_RPRN,  KC_DLR, KC_ASTR,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  XXXXXXX, XXXXXXX, KC_LCBR, KC_RCBR, KC_COLN, KC_PERC, KC_COLN, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+  XXXXXXX, XXXXXXX, KC_LCBR, KC_RCBR, KC_TILD, KC_PERC, KC_COLN, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                              _______, _______, _______, _______, _______,  _______, _______, _______
  ),
 
