@@ -168,10 +168,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   return true;
 }
 
-// const uint16_t PROGMEM test_combo1[] = {KC_A, KC_B, COMBO_END};
-const uint16_t PROGMEM combo_lparen[] = {KC_S, KC_T, COMBO_END}; // (
-// const uint16_t PROGMEM combo_rparen[] = {KC_M, KC_N, COMBO_END}; // )
+const uint16_t PROGMEM combo_lparen[] = {KC_S, KC_T, COMBO_END};
 combo_t key_combos[] = {
-    // COMBO(combo_lparen_colemak, LSFT(KC_9)),           // Left parenthesis ( (Colemak)
-    COMBO(combo_lparen, KC_LPRN),
+    COMBO(combo_lparen, LSFT(KC_9)),
 };
+uint16_t COMBO_LEN = ARRAY_SIZE(key_combos);
