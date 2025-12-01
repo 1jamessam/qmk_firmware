@@ -168,7 +168,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   return true;
 }
 
-const uint16_t PROGMEM combo_lparen[] = {KC_S, KC_T, COMBO_END};
+// T key is LT(_NUM, KC_T), so the combo must reference that keycode to fire.
+const uint16_t PROGMEM combo_lparen[] = {KC_S, LT(_NUM, KC_T), COMBO_END};
 combo_t key_combos[] = {
     COMBO(combo_lparen, LSFT(KC_9)),
 };
