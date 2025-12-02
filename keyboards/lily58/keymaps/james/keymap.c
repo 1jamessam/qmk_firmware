@@ -168,9 +168,36 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   return true;
 }
 
-// T key is LT(_NUM, KC_T), so the combo must reference that keycode to fire.
-const uint16_t PROGMEM combo_lparen[] = {KC_S, LT(_NUM, KC_T), COMBO_END};
+const uint16_t PROGMEM combo_lparen[] = {KC_S, LT(_NUM,KC_T), COMBO_END};   // (
+const uint16_t PROGMEM combo_rparen[] = {LT(_SYMB,KC_N), KC_E, COMBO_END};  // )
+const uint16_t PROGMEM combo_lbrack[] = {KC_F, KC_P, COMBO_END};    // [
+const uint16_t PROGMEM combo_rbrack[] = {KC_L, KC_U, COMBO_END};    // ]
+const uint16_t PROGMEM combo_lcrlbr[] = {KC_C, KC_D, COMBO_END};    // {
+const uint16_t PROGMEM combo_rcrlbr[] = {KC_H, KC_COMM, COMBO_END}; // }
+const uint16_t PROGMEM combo_plus[] = {KC_P, KC_L, COMBO_END};      // +
+const uint16_t PROGMEM combo_equal[] = {LT(_NUM,KC_T), LT(_SYMB,KC_N), COMBO_END};  // =
+const uint16_t PROGMEM combo_minus[] = {KC_D, KC_H, COMBO_END};     // -
+const uint16_t PROGMEM combo_unds[] = {KC_G, KC_M, COMBO_END};      // _
+const uint16_t PROGMEM combo_lt[] = {KC_W, KC_F, COMBO_END};        // <
+const uint16_t PROGMEM combo_gt[] = {KC_U, KC_Y, COMBO_END};        // >
+const uint16_t PROGMEM combo_astr[] = {KC_F, KC_U, COMBO_END};      // *
+
 combo_t key_combos[] = {
-    COMBO(combo_lparen, LSFT(KC_9)),
+    COMBO(combo_lparen, KC_LPRN),
+    COMBO(combo_rparen, KC_RPRN),
+    COMBO(combo_lbrack, KC_LBRC),
+    COMBO(combo_rbrack, KC_RBRC),
+    COMBO(combo_lcrlbr, KC_LCBR),
+    COMBO(combo_rcrlbr, KC_RCBR),
+    COMBO(combo_plus, KC_PLUS),
+    COMBO(combo_equal, KC_PEQL),
+    COMBO(combo_minus, KC_MINS),
+    COMBO(combo_unds, KC_UNDS),
+    COMBO(combo_lt, KC_LT),
+    COMBO(combo_gt, KC_GT)
+    COMBO(combo_astr, KC_ASTR)
+
 };
 uint16_t COMBO_LEN = ARRAY_SIZE(key_combos);
+
+// https://github.com/cyb3rkun/corneGLP
