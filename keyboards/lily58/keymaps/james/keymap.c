@@ -16,7 +16,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * | BSPC |   A  |   R  |   S  |   T  |   G  |-------.    ,-------|   M  |N/SYMB|   E  |   I  |   O  |  ' " |
  * |------+------+------+------+------+------|       |    |  SPOT |------+------+------+------+------+------|
- * | CAPS |   Z  |   X  |   C  |   D  |   V  |-------|    |-------|   K  |   H  |  , < |  . > |  / ? | PGDN |
+ * | CAPS |   Z  |   X  |   C  |   D  |   V  |-------|    |-------|   K  |   H  |  , < |  . > |  / ? |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | LAlt | LGUI | LCTL | /  SFT  /       \  ENT \  |ALT-NA|CMD-NA| RALT |
  *                   |      |      |  ESC |/   SPC /         \ NAV  \ |      |      |      |
@@ -26,7 +26,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   XXXXXXX, KC_BRID, KC_BRIU, XXXXXXX, XXXXXXX,       XXXXXXX,                                  KC_MPRV,            KC_MPLY,            KC_MFFD, KC_MUTE, KC_VOLD, KC_VOLU,
   KC_TAB,  KC_Q,       KC_W,    KC_F,    KC_P,          KC_B,                                  KC_J,               KC_L,               KC_U,    KC_Y,    KC_SCLN, KC_BSLS,
   KC_BSPC, KC_A,       KC_R,    KC_S,    KC_T,          KC_G,                                  KC_M,               LT(_SYMB,KC_N),     KC_E,    KC_I,    KC_O,    KC_QUOT,
-  KC_CAPS, KC_Z,       KC_X,    KC_C,    KC_D,          KC_V,       XXXXXXX, G(KC_SPC),        KC_K,               KC_H,               KC_COMM, KC_DOT,  KC_SLSH, KC_PGDN,
+  KC_CAPS, KC_Z,       KC_X,    KC_C,    KC_D,          KC_V,       XXXXXXX, G(KC_SPC),        KC_K,               KC_H,               KC_COMM, KC_DOT,  KC_SLSH, XXXXXXX,
                              KC_LALT, KC_LGUI, CTL_T(KC_ESC), SFT_T(KC_SPC), LT(_NAVI,KC_ENT), LM(_NAVI,MOD_LALT), LM(_NAVI,MOD_LGUI), KC_RALT
  ),
 
@@ -37,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |      |   !  |      |      |   =  |   `  |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |      |   ^  |      |      |   $  |   *  |-------.    ,-------|      |      |      |      |      |      |
- * |------+------+------+------+------+------|   ~   |    |       |------+------+------+------+------|------|
+ * |------+------+------+------+------+------|   ~   |    |       |------+------+------+------+------+------|
  * |      |      |      |      |   :  |   %  |-------|    |-------|      |      |      |      |      |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | LAlt | LGUI | LCTL | /  SFT  /       \  ENT \  |ALT-NA|CMD-NA| RALT |
@@ -59,7 +59,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |      |      |   7  |   8  |   9  |      |                    | PGUP | HOME |  UP  | END  |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |      |   0  |   4  |   5  |   6  |      |-------.    ,-------|  C<- | LEFT | DOWN | RGHT |  C-> |      |
- * |------+------+------+------+------+------|       |    |       |------+------+------+------+------|------|
+ * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
  * |      |      |   1  |   2  |   3  |      |-------|    |-------| PGDN | SG-[ |      | SG-] |      |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | LAlt | LGUI | LCTL | /  SFT  /       \  ENT \  |ALT-NA|CMD-NA| RALT |
@@ -78,10 +78,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------.                    ,-----------------------------------------.
  * |      |      |      |      |      |      |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |      |      |      |      |      |      |                    |      |      |  UP  |      |      |      |
+ * |      |      |      |      |      |      |                    |      | WHLD |  UP  | WHLU |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |      |      |      |      |      |      |-------.    ,-------|      | LEFT | DOWN | RGHT |      |      |
- * |------+------+------+------+------+------|       |    |       |------+------+------+------+------|------|
+ * |      |      |      |      |      |      |-------.    ,-------| WHLL | LEFT | DOWN | RGHT | WHLR |      |
+ * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
  * |      |      |      |      |      |      |-------|    |-------|      | MS_1 |      | MS_2 |      |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   |      |      |      | /       /       \      \  |      |      |      |
@@ -90,21 +90,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
  [_MOUSE] = LAYOUT(
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, MS_UP,   XXXXXXX, XXXXXXX, XXXXXXX,
-  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, MS_LEFT, MS_DOWN, KC_RGHT, XXXXXXX, XXXXXXX,
+  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, MS_WHLD, MS_UP,   MS_WHLU, XXXXXXX, XXXXXXX,
+  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   MS_WHLL, MS_LEFT, MS_DOWN, MS_RGHT, MS_WHLR, XXXXXXX,
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, MS_BTN1, XXXXXXX, MS_BTN2, XXXXXXX, XXXXXXX,
                              _______, _______, _______, _______, _______,  _______, _______, _______
  )
 
-
-
-
-
-
 /* THAI
  * ,-----------------------------------------.                    ,-----------------------------------------.
  * | ESC  |   1  |   2  |   3  |   4  |   5  |                    |   6  |   7  |   8  |   9  |   0  |  `   |
-#* |------+------+------+------+------+------|                    |------+------+------+------+------+------|
+ * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * | Tab  |   Q  |   W  |   E  |   R  |   T  |                    |   Y  |   U  |   I  |   O  |   P  |  -   |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |LCTRL |   A  |   S  |   D  |   F  |   G  |-------.    ,-------|   H  |   J  |   K  |   L  |   ;  |  '   |
@@ -117,8 +112,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 
 //  [_THAI] = LAYOUT(
-//   _______,  UC(L'ภ'), UC(L'ถ'), UC(L'ุ'), UC(L'ึ'),UC(L''),                     UC(L''),    UC(L''),    UC(L''),    UC(L''),    UC(L''),    UC(L''),
-//   _______,  UC(L'ๆ'), UC(L'ไ'), UC(L'ำ'), UC(L'พ'),    UC(L'ะ'),                     UC(L''),    UC(L''),    UC(L''),    UC(L''),    UC(L''),    UC(L''),
+//   _______,  UC(L'ภ'), UC(L'ถ'),  UC(L'ุ'), UC(L'ึ'),  UC(L''),                     UC(L''),    UC(L''),    UC(L''),    UC(L''),    UC(L''),    UC(L''),
+//   _______,  UC(L'ๆ'), UC(L'ไ'), UC(L'ำ'), UC(L'พ'),  UC(L'ะ'),                     UC(L''),    UC(L''),    UC(L''),    UC(L''),    UC(L''),    UC(L''),
 //   _______,  UC(L'ฟ'), UC(L'ห'), UC(L'ก'), UC(L'ด'), UC(L'เ'),                     UC(L''),    UC(L''),    UC(L''),    UC(L''),    UC(L''), UC(L''),
 //   _______,  UC(L'ผ'), UC(L'ป'), UC(L'แ'), UC(L'อ'), UC(L'ิ'), UC(L''), UC(L''),  UC(L''),    UC(L''),    UC(L''), UC(L''),  UC(L''),  UC(L''),
 //                                  _______, _______, _______, _______, _______,  _______, _______, _______
