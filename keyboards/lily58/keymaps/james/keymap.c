@@ -18,7 +18,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|       |    |  SPOT |------+------+------+------+------+------|
  * | CAPS |   Z  |   X  |   C  |   D  |   V  |-------|    |-------|   K  |   H  |  , < |  . > |  / ? | PGDN |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *                   | LAlt | LGUI | LCTL | /  SFT  /       \  ENT \ |ALT-NA|CMD-NA| RALT |
+ *                   | LAlt | LGUI | LCTL | /  SFT  /       \  ENT \  |ALT-NA|CMD-NA| RALT |
  *                   |      |      |  ESC |/   SPC /         \ NAV  \ |      |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
@@ -40,8 +40,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|   ~   |    |       |------+------+------+------+------|------|
  * |      |      |      |      |   :  |   %  |-------|    |-------|      |      |      |      |      |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *                   | LAlt | LGUI | LCTL | /SFT/SPC/       \ENT/NAV\ | RCTL | RGUI | RALT |
- *                   |      |      |      |/       /         \      \ |      |      |      |
+ *                   | LAlt | LGUI | LCTL | /  SFT  /       \  ENT \  |ALT-NA|CMD-NA| RALT |
+ *                   |      |      |  ESC |/   SPC /         \ NAV  \ |      |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
  [_SYMB] = LAYOUT(
@@ -62,15 +62,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|       |    |       |------+------+------+------+------|------|
  * |      |      |   1  |   2  |   3  |      |-------|    |-------| PGDN | SG-[ |      | SG-] |      |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *                   | LAlt | LGUI | LCTL | /SFT/SPC/       \ENT/NAV\ | RCTL | RGUI | RALT |
- *                   |      |      |      |/       /         \      \ |      |      |      |
+ *                   | LAlt | LGUI | LCTL | /  SFT  /       \  ENT \  |ALT-NA|CMD-NA| RALT |
+ *                   |      |      |  ESC |/   SPC /         \ NAV  \ |      |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
  [_NAVI] = LAYOUT(
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX,    XXXXXXX,      C(KC_UP), XXXXXXX,      XXXXXXX,    XXXXXXX,
-  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   KC_PGUP,    KC_HOME,      KC_UP,    KC_END,       XXXXXXX,    XXXXXXX,
-  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   C(KC_LEFT), KC_LEFT,      KC_DOWN,  KC_RGHT,      C(KC_RGHT), XXXXXXX,
-  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_PGDN,    LSG(KC_LBRC), XXXXXXX,  LSG(KC_RBRC), XXXXXXX,    XXXXXXX,
+  XXXXXXX, XXXXXXX,    KC_7,    KC_8,    KC_9, XXXXXXX,                   KC_PGUP,    KC_HOME,      KC_UP,    KC_END,       XXXXXXX,    XXXXXXX,
+  XXXXXXX,    KC_0,    KC_4,    KC_5,    KC_6, XXXXXXX,                   C(KC_LEFT), KC_LEFT,      KC_DOWN,  KC_RGHT,      C(KC_RGHT), XXXXXXX,
+  XXXXXXX, XXXXXXX,    KC_1,    KC_2,    KC_3, XXXXXXX, XXXXXXX, XXXXXXX, KC_PGDN,    LSG(KC_LBRC), XXXXXXX,  LSG(KC_RBRC), XXXXXXX,    XXXXXXX,
                              _______, _______, _______, _______, _______,  _______, _______, _______
  )
 
@@ -82,9 +82,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |      |      |      |      |      |      |-------.    ,-------|      | LEFT | DOWN | RGHT |      |      |
  * |------+------+------+------+------+------|       |    |       |------+------+------+------+------|------|
- * |      |      |      |      |      |      |-------|    |-------|      |      |      |      |      |      |
+ * |      |      |      |      |      |      |-------|    |-------|      | MS_1 |      | MS_2 |      |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *                   |      |      |      |/  MS_1  /       \ MS_2 \ |      |      |      |
+ *                   |      |      |      | /       /       \      \  |      |      |      |
  *                   |      |      |      |/       /         \      \ |      |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
@@ -92,8 +92,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, MS_UP,   XXXXXXX, XXXXXXX, XXXXXXX,
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, MS_LEFT, MS_DOWN, KC_RGHT, XXXXXXX, XXXXXXX,
-  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                             _______, _______, _______, MS_BTN1, MS_BTN2,  _______, _______, _______
+  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, MS_BTN1, XXXXXXX, MS_BTN2, XXXXXXX, XXXXXXX,
+                             _______, _______, _______, _______, _______,  _______, _______, _______
  )
 
 
