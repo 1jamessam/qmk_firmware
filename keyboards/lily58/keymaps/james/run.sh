@@ -2,25 +2,32 @@
 
 CPPFLAGS="" CFLAGS="" CXXFLAGS="" OBJCFLAGS="" OBJCXXFLAGS="" LDFLAGS="" SDKROOT="" \
     qmk compile -kb lily58 -km james
+exit 0
 
 CPPFLAGS="" CFLAGS="" CXXFLAGS="" OBJCFLAGS="" OBJCXXFLAGS="" LDFLAGS="" SDKROOT="" \
     qmk c2json keyboards/lily58/keymaps/james/keymap.c |
-    keymap parse -l Colemak Symbol Number Navigation -q - > james_keymap.yaml
+    keymap parse -l Colemak Symbol Navi-Number Mouse -q - > james_keymap.yaml
 cat <<'EOF' >> james_keymap.yaml
 combos:
-  - {p: [14, 15], k: '<', l: ['Colemak']}
+  - {p: [14, 15], k: '!', l: ['Colemak']}
   - {p: [15, 16], k: '[', l: ['Colemak']}
-  - {p: [15, 20], k: '*', l: ['Colemak'], a: top, offset: 0.1}
-  - {p: [16, 19], k: '+', l: ['Colemak']}
   - {p: [19, 20], k: ']', l: ['Colemak']}
-  - {p: [20, 21], k: '>', l: ['Colemak']}
+  - {p: [20, 21], k: '=', l: ['Colemak']}
+  - {p: [25, 26], k: '~', l: ['Colemak']}
+  - {p: [26, 27], k: '`', l: ['Colemak']}
   - {p: [27, 28], k: '(', l: ['Colemak']}
-  - {p: [29, 30], k: '_', l: ['Colemak'], a: bottom}
-  - {p: [28, 31], k: '=', l: ['Colemak']}
   - {p: [31, 32], k: ')', l: ['Colemak']}
-  - {p: [39, 40], k: '{', l: ['Colemak']}
-  - {p: [40, 45], k: '-', l: ['Colemak'], a: bottom}
-  - {p: [45, 46], k: '}', l: ['Colemak']}
+  - {p: [32, 33], k: ':', l: ['Colemak']}
+  - {p: [33, 34], k: '\', l: ['Colemak']}
+  - {p: [38, 39], k: '|', l: ['Colemak']}
+  - {p: [39, 40], k: '@', l: ['Colemak']}
+  - {p: [46, 47], k: '#', l: ['Colemak']}
+  - {p: [45, 46], k: '&', l: ['Colemak']}
+
+  - {p: [16, 19], k: '+', l: ['Colemak']}
+  - {p: [28, 31], k: '_', l: ['Colemak']}
+  - {p: [40, 45], k: '-', l: ['Colemak']}
+
 EOF
 keymap draw -k lily58/rev1 james_keymap.yaml > james_keymap.ortho.svg
 
