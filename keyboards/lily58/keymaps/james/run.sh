@@ -1,13 +1,12 @@
 #!/bin/bash
 
-CPPFLAGS="" CFLAGS="" CXXFLAGS="" OBJCFLAGS="" OBJCXXFLAGS="" LDFLAGS="" SDKROOT="" \
-    qmk compile -kb lily58 -km james
-exit 0
+# shellcheck disable=SC2034
+CPPFLAGS="" CFLAGS="" CXXFLAGS="" OBJCFLAGS="" OBJCXXFLAGS="" LDFLAGS="" SDKROOT=""
 
-CPPFLAGS="" CFLAGS="" CXXFLAGS="" OBJCFLAGS="" OBJCXXFLAGS="" LDFLAGS="" SDKROOT="" \
-    qmk c2json keyboards/lily58/keymaps/james/keymap.c |
-    keymap parse -l Colemak Symbol Navi-Number Mouse -q - > james_keymap.yaml
-cat <<'EOF' >> james_keymap.yaml
+qmk compile -kb lily58 -km james
+
+qmk c2json keyboards/lily58/keymaps/james/keymap.c | keymap parse -l Colemak Symbol Navi-Number Mouse -q - >james_keymap.yaml
+cat <<'EOF' >>james_keymap.yaml
 combos:
   - {p: [14, 15], k: '!', l: ['Colemak']}
   - {p: [15, 16], k: '[', l: ['Colemak']}
@@ -29,7 +28,7 @@ combos:
   - {p: [40, 45], k: '-', l: ['Colemak']}
 
 EOF
-keymap draw -k lily58/rev1 james_keymap.yaml > james_keymap.ortho.svg
+keymap draw -k lily58/rev1 james_keymap.yaml >james_keymap.ortho.svg
 
 # env -u SDKROOT -u CPPFLAGS -u CFLAGS -u CXXFLAGS -u OBJCFLAGS -u OBJCXXFLAGS -u LDFLAGS \
 #     qmk compile -kb lily58 -km james

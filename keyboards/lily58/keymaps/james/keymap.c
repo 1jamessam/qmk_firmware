@@ -172,7 +172,7 @@ const uint16_t PROGMEM combo_exlm[] = {KC_W, KC_F, COMBO_END};      // !
 const uint16_t PROGMEM combo_lbrack[] = {KC_F, KC_P, COMBO_END};    // [
 const uint16_t PROGMEM combo_plus[] = {KC_P, KC_L, COMBO_END};      // +
 const uint16_t PROGMEM combo_rbrack[] = {KC_L, KC_U, COMBO_END};    // ]
-const uint16_t PROGMEM combo_equal[] = {KC_T, LT(_SYMB,KC_N), COMBO_END};  // =
+const uint16_t PROGMEM combo_equal[] = {KC_U, KC_Y, COMBO_END};    // =
 const uint16_t PROGMEM combo_tild[] = {KC_A, KC_R, COMBO_END};      // ~
 const uint16_t PROGMEM combo_grv[] = {KC_R, KC_S, COMBO_END};       // `
 const uint16_t PROGMEM combo_lparen[] = {KC_S, KC_T, COMBO_END};    // (

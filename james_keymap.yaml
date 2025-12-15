@@ -1,0 +1,258 @@
+layout: {qmk_keyboard: lily58, layout_name: LAYOUT}
+layers:
+  Colemak:
+  - ''
+  - BRID
+  - BRIU
+  - Ctl+UP
+  - ''
+  - ''
+  - MPRV
+  - MPLY
+  - MFFD
+  - MUTE
+  - VOLD
+  - VOLU
+  - TAB
+  - Q
+  - W
+  - F
+  - P
+  - B
+  - J
+  - L
+  - U
+  - Y
+  - ;
+  - ''
+  - BSPC
+  - A
+  - R
+  - S
+  - T
+  - G
+  - M
+  - LT( SYMB,N)
+  - E
+  - I
+  - O
+  - ''''
+  - CAPS
+  - Z
+  - X
+  - C
+  - D
+  - V
+  - ''
+  - Gui+SPC
+  - K
+  - H
+  - ','
+  - .
+  - /
+  - TG( MS)
+  - LALT
+  - LGUI
+  - {t: ESC, h: CTL}
+  - {t: SPC, h: SFT}
+  - LT( NAVI,ENT)
+  - LM( NAVI,MOD LALT)
+  - LM( NAVI,MOD LGUI)
+  - RALT
+  Symbol:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - <
+  - '>'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ^
+  - '{'
+  - '}'
+  - $
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '%'
+  - '*'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Navi-Number:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '7'
+  - '8'
+  - '9'
+  - ''
+  - PGUP
+  - HOME
+  - UP
+  - END
+  - ''
+  - ''
+  - ''
+  - '0'
+  - '4'
+  - '5'
+  - '6'
+  - ''
+  - Ctl+LEFT
+  - LEFT
+  - DOWN
+  - RGHT
+  - Ctl+RGHT
+  - ''
+  - ''
+  - ''
+  - '1'
+  - '2'
+  - '3'
+  - ''
+  - ''
+  - ''
+  - PGDN
+  - Sft+Gui+[
+  - Ctl+UP
+  - Sft+Gui+]
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Mouse:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - MS WHLD
+  - MS UP
+  - MS WHLU
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - MS WHLL
+  - MS LEFT
+  - MS DOWN
+  - MS RGHT
+  - MS WHLR
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - MS BTN3
+  - ''
+  - ''
+  - ''
+  - TG( MS)
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - MS BTN1
+  - MS BTN2
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+combos:
+  - {p: [14, 15], k: '!', l: ['Colemak']}
+  - {p: [15, 16], k: '[', l: ['Colemak']}
+  - {p: [19, 20], k: ']', l: ['Colemak']}
+  - {p: [20, 21], k: '=', l: ['Colemak']}
+  - {p: [25, 26], k: '~', l: ['Colemak']}
+  - {p: [26, 27], k: '`', l: ['Colemak']}
+  - {p: [27, 28], k: '(', l: ['Colemak']}
+  - {p: [31, 32], k: ')', l: ['Colemak']}
+  - {p: [32, 33], k: ':', l: ['Colemak']}
+  - {p: [33, 34], k: '\', l: ['Colemak']}
+  - {p: [38, 39], k: '|', l: ['Colemak']}
+  - {p: [39, 40], k: '@', l: ['Colemak']}
+  - {p: [46, 47], k: '#', l: ['Colemak']}
+  - {p: [45, 46], k: '&', l: ['Colemak']}
+
+  - {p: [16, 19], k: '+', l: ['Colemak']}
+  - {p: [28, 31], k: '_', l: ['Colemak']}
+  - {p: [40, 45], k: '-', l: ['Colemak']}
+
