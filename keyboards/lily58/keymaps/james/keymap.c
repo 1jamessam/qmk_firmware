@@ -57,21 +57,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------.                    ,-----------------------------------------.
  * |      |      |      |      |      |      |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |      |      |   7  |   8  |   9  |      |                    |      | HOME |  UP  | END  |      |      |
+ * |      |      |   9  |   8  |   7  |      |                    |      | HOME |  UP  | END  |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |      |   0  |   4  |   5  |   6  |      |-------.    ,-------|      | LEFT | DOWN | RGHT |      |      |
+ * |      |      |   3  |   2  |   1  |   0  |-------.    ,-------|      | LEFT | DOWN | RGHT |      |      |
  * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
- * |      |      |   1  |   2  |   3  |      |-------|    |-------|      | SG-[ | C-^  | SG-] |      |      |
+ * |      |      |   6  |   5  |   4  |      |-------|    |-------|      | SG-[ | C-^  | SG-] |      |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | LAlt | LGUI | LCTL | /  SFT  /       \  ENT \  |ALT-NA|CMD-NA| RALT |
  *                   |      |      |  ESC |/   SPC /         \ NAV  \ |      |      |      |
  *                   `----------------------------'           '------''--------------------'
  */
  [_NAVI] = LAYOUT(
-  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX,    XXXXXXX,      XXXXXXX,  XXXXXXX,      XXXXXXX,    XXXXXXX,
-  XXXXXXX, XXXXXXX,    KC_7,    KC_8,    KC_9, XXXXXXX,                   KC_PGUP,    KC_HOME,      KC_UP,    KC_END,       XXXXXXX,    XXXXXXX,
-  XXXXXXX,    KC_0,    KC_4,    KC_5,    KC_6, XXXXXXX,                   C(KC_LEFT), KC_LEFT,      KC_DOWN,  KC_RGHT,      C(KC_RGHT), XXXXXXX,
-  XXXXXXX, XXXXXXX,    KC_1,    KC_2,    KC_3, XXXXXXX, XXXXXXX, XXXXXXX, KC_PGDN,    LSG(KC_LBRC), C(KC_UP), LSG(KC_RBRC), XXXXXXX,    XXXXXXX,
+  _______, _______, _______, _______, _______, _______,                   _______,    _______,      _______,  _______,      _______,    _______,
+  _______, XXXXXXX,    KC_9,    KC_8,    KC_7, XXXXXXX,                   KC_PGUP,    KC_HOME,      KC_UP,    KC_END,       XXXXXXX,    XXXXXXX,
+  _______, XXXXXXX,    KC_3,    KC_2,    KC_1,    KC_0,                   C(KC_LEFT), KC_LEFT,      KC_DOWN,  KC_RGHT,      C(KC_RGHT), XXXXXXX,
+  _______, XXXXXXX,    KC_6,    KC_5,    KC_4, XXXXXXX, XXXXXXX, XXXXXXX, KC_PGDN,    LSG(KC_LBRC), C(KC_UP), LSG(KC_RBRC), XXXXXXX,    XXXXXXX,
                              _______, _______, _______, _______, _______,  _______, _______, _______
  ),
 
