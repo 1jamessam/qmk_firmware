@@ -74,9 +74,9 @@ layers:
   - ''
   - ''
   - ''
-  - <
-  - '>'
-  - ''
+  - '~'
+  - '#'
+  - '*'
   - ''
   - ''
   - ''
@@ -99,8 +99,8 @@ layers:
   - ''
   - ''
   - ''
+  - ''
   - '%'
-  - '*'
   - ''
   - ''
   - ''
@@ -119,23 +119,23 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   Navi-Number:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - '7'
-  - '8'
   - '9'
+  - '8'
+  - '7'
   - ''
   - PGUP
   - HOME
@@ -143,23 +143,23 @@ layers:
   - END
   - ''
   - ''
+  - {t: ▽, type: trans}
   - ''
+  - '3'
+  - '2'
+  - '1'
   - '0'
-  - '4'
-  - '5'
-  - '6'
-  - ''
   - Ctl+LEFT
   - LEFT
   - DOWN
   - RGHT
   - Ctl+RGHT
   - ''
+  - {t: ▽, type: trans}
   - ''
-  - ''
-  - '1'
-  - '2'
-  - '3'
+  - '6'
+  - '5'
+  - '4'
   - ''
   - ''
   - ''
@@ -178,18 +178,18 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   Mouse:
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - ''
   - ''
   - ''
@@ -241,16 +241,14 @@ combos:
   - {p: [15, 16], k: '[', l: ['Colemak']}
   - {p: [19, 20], k: ']', l: ['Colemak']}
   - {p: [20, 21], k: '=', l: ['Colemak']}
-  - {p: [25, 26], k: '~', l: ['Colemak']}
   - {p: [26, 27], k: '`', l: ['Colemak']}
   - {p: [27, 28], k: '(', l: ['Colemak']}
   - {p: [31, 32], k: ')', l: ['Colemak']}
   - {p: [32, 33], k: ':', l: ['Colemak']}
-  - {p: [33, 34], k: '\', l: ['Colemak']}
   - {p: [38, 39], k: '|', l: ['Colemak']}
   - {p: [39, 40], k: '@', l: ['Colemak']}
-  - {p: [46, 47], k: '#', l: ['Colemak']}
   - {p: [45, 46], k: '&', l: ['Colemak']}
+  - {p: [46, 47], k: '\', l: ['Colemak']}
 
   - {p: [16, 19], k: '+', l: ['Colemak']}
   - {p: [28, 31], k: '_', l: ['Colemak']}

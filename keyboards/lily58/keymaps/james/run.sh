@@ -12,16 +12,14 @@ combos:
   - {p: [15, 16], k: '[', l: ['Colemak']}
   - {p: [19, 20], k: ']', l: ['Colemak']}
   - {p: [20, 21], k: '=', l: ['Colemak']}
-  - {p: [25, 26], k: '~', l: ['Colemak']}
   - {p: [26, 27], k: '`', l: ['Colemak']}
   - {p: [27, 28], k: '(', l: ['Colemak']}
   - {p: [31, 32], k: ')', l: ['Colemak']}
   - {p: [32, 33], k: ':', l: ['Colemak']}
-  - {p: [33, 34], k: '\', l: ['Colemak']}
   - {p: [38, 39], k: '|', l: ['Colemak']}
   - {p: [39, 40], k: '@', l: ['Colemak']}
-  - {p: [46, 47], k: '#', l: ['Colemak']}
   - {p: [45, 46], k: '&', l: ['Colemak']}
+  - {p: [46, 47], k: '\', l: ['Colemak']}
 
   - {p: [16, 19], k: '+', l: ['Colemak']}
   - {p: [28, 31], k: '_', l: ['Colemak']}
