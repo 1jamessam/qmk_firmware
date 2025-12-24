@@ -28,12 +28,12 @@ layers:
   - BSPC
   - A
   - R
-  - S
+  - {t: S, h: SFT}
   - T
   - G
   - M
   - LT( SYMB,N)
-  - E
+  - {t: E, h: SFT}
   - I
   - O
   - ''''
@@ -51,14 +51,14 @@ layers:
   - .
   - /
   - TG( MS)
+  - ''
   - LALT
-  - LGUI
   - {t: ESC, h: CTL}
-  - {t: SPC, h: SFT}
+  - {t: SPC, h: GUI}
   - LT( NAVI,ENT)
   - LM( NAVI,MOD LALT)
-  - LM( NAVI,MOD LGUI)
   - RALT
+  - ''
   Symbol:
   - ''
   - ''
